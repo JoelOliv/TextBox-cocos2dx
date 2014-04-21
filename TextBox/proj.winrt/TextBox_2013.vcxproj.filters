@@ -25,6 +25,15 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{97c3b83c-49c5-4c12-b313-2ad896c789fb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\TopQX">
+      <UniqueIdentifier>{69cb070a-1556-44b8-b89d-56731a3145bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\TopQX\InputText">
+      <UniqueIdentifier>{912387f8-bdb0-41f9-8ed5-0864abe3d5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\TopQX\Draw">
+      <UniqueIdentifier>{a7085ae2-11cf-41aa-a0da-89a84e4aedc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -39,6 +48,21 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\Objects2dFactory.cpp">
+      <Filter>Classes\TopQX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\Objects2dHandler.cpp">
+      <Filter>Classes\TopQX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\InputText\TextBox.cpp">
+      <Filter>Classes\TopQX\InputText</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\Draw\DrawSprite.cpp">
+      <Filter>Classes\TopQX\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\ScreenEngine.cpp">
+      <Filter>Classes\TopQX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -52,6 +76,21 @@
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TopQX\Objects2dFactory.h">
+      <Filter>Classes\TopQX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TopQX\Objects2dHandler.h">
+      <Filter>Classes\TopQX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TopQX\InputText\TextBox.h">
+      <Filter>Classes\TopQX\InputText</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TopQX\Draw\DrawSprite.h">
+      <Filter>Classes\TopQX\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TopQX\ScreenEngine.h">
+      <Filter>Classes\TopQX</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

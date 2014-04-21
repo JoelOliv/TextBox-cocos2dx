@@ -1,4 +1,6 @@
 #include "HelloWorldScene.h"
+#include "Objects2dFactory.h"
+#include "TextBox.h"
 
 USING_NS_CC;
 
@@ -72,7 +74,19 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
-    
+	CCMenu* menu = CCMenu::create(NULL);
+	menu->setPosition(ccp(0,0));
+	menu->setAnchorPoint(ccp(0,0));
+	for (int i = 0; i < 5; i++){
+
+		QXTextBox* f = new QXTextBox(1000, 100, ccc4(255, 255, 255, 255), ccc4(255, 255, 255, 255), 0.0f, 0.9f, "Test", "Arial", ccc3(0, 0, 0));
+		f->setPosition(ccp(0, visibleSize.height /6 * i));
+		f->setAnchorPoint(ccp(0, 0));
+		menu->addChild(f);
+	}
+
+	this->addChild(menu);
+
     return true;
 }
 
@@ -80,7 +94,8 @@ bool HelloWorld::init()
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT) || (CC_TARGET_PLATFORM == CC_PLATFORM_WP8)
-	CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
+	
+	//CCMessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
 #else
     CCDirector::sharedDirector()->end();
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
