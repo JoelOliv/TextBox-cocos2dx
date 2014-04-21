@@ -132,13 +132,13 @@
     <ClCompile>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)pch.pch</PrecompiledHeaderOutputFile>
-      <AdditionalIncludeDirectories>$(LIB_COCOS2DX)\cocos2dx\platform\third_party\winrt\angleproject\include;$(LIB_COCOS2DX)\cocos2dx\platform\third_party\winrt\angleproject\samples\gles2_book\Common;$(LIB_COCOS2DX)\cocos2dx;$(LIB_COCOS2DX)\cocos2dx\include;$(LIB_COCOS2DX)\cocos2dx\kazmath\include;$(LIB_COCOS2DX)\cocos2dx\platform\winrt;$(LIB_COCOS2DX)\external;$(LIB_COCOS2DX)\external\chipmunk\include\chipmunk;$(LIB_COCOS2DX)\CocosDenshion\include;$(LIB_COCOS2DX)\extensions;..\Classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(LIB_COCOS2DX)\cocos2dx\platform\third_party\winrt\angleproject\include;$(LIB_COCOS2DX)\cocos2dx\platform\third_party\winrt\angleproject\samples\gles2_book\Common;$(LIB_COCOS2DX)\cocos2dx;$(LIB_COCOS2DX)\cocos2dx\include;$(LIB_COCOS2DX)\cocos2dx\kazmath\include;$(LIB_COCOS2DX)\cocos2dx\platform\winrt;$(LIB_COCOS2DX)\external;$(LIB_COCOS2DX)\external\chipmunk\include\chipmunk;$(LIB_COCOS2DX)\CocosDenshion\include;$(LIB_COCOS2DX)\extensions;..\Classes;..\Classes\TopQX;..\Classes\TopQX\Draw;..\Classes\TopQX\InputText;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4267;4251;4244;4453;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
-      <PreprocessorDefinitions>WINRT;_WINRT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINRT;_WINRT;_EXPORT_DLL_;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
@@ -176,7 +176,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
-      <PreprocessorDefinitions>WINRT;_WINRT;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WINRT;_WINRT;_EXPORT_DLL_;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D "_CRT_SECURE_NO_WARNINGS" %(AdditionalOptions)</AdditionalOptions>
       <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProgramDatabase</DebugInformationFormat>
       <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</WholeProgramOptimization>
@@ -217,6 +217,11 @@
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\AppMacros.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\TopQX\Draw\DrawSprite.h" />
+    <ClInclude Include="..\Classes\TopQX\InputText\TextBox.h" />
+    <ClInclude Include="..\Classes\TopQX\Objects2dFactory.h" />
+    <ClInclude Include="..\Classes\TopQX\Objects2dHandler.h" />
+    <ClInclude Include="..\Classes\TopQX\ScreenEngine.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -314,6 +319,11 @@
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
       </PrecompiledHeaderOutputFile>
     </ClCompile>
+    <ClCompile Include="..\Classes\TopQX\Draw\DrawSprite.cpp" />
+    <ClCompile Include="..\Classes\TopQX\InputText\TextBox.cpp" />
+    <ClCompile Include="..\Classes\TopQX\Objects2dFactory.cpp" />
+    <ClCompile Include="..\Classes\TopQX\Objects2dHandler.cpp" />
+    <ClCompile Include="..\Classes\TopQX\ScreenEngine.cpp" />
     <ClCompile Include="App.xaml.cpp">
       <DependentUpon>App.xaml</DependentUpon>
     </ClCompile>
